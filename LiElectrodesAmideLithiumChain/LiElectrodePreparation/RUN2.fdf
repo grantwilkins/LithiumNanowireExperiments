@@ -1,0 +1,32 @@
+#------------------------------------------------------
+# FDF for 1d Si chain
+# 
+SystemName       1D Li GGA       # Descriptive name of the system
+SystemLabel      Li1D_Elec       # Short name for naming files
+
+%include STRUCT2.fdf
+#%include BASIS.fdf
+
+
+
+%block kgrid_Monkhorst_Pack
+ 2    0    0    0.00
+ 0    2    0    0.00
+ 0    0   10    0.00
+%endblock kgrid_Monkhorst_Pack
+
+XC.functional       GGA
+XC.authors          PBE
+MeshCutoff          250.0 Ry
+SaveHS              T
+DM.UseSaveDM        true     # to use continuation files
+
+# Output options
+WriteCoorStep
+WriteMullikenPop       1    
+WriteBands          true
+BandLinesScale      ReciprocalLatticeVectors
+%block BandLines
+1   0.     0.     -0.5      \Gamma
+50  0.     0.      0.5      \pi/a
+%endblock BandLines
