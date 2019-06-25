@@ -49,3 +49,20 @@ make transiesta
 ```
 Once complete, copy the siesta executable from Obj and the transiesta executable from TObj to the bin file.
 
+## Installation of TBTrans
+The final piece of software needed to run the source code is TBTrans. To install TBTrans, navigate to Util and into the TBTrans file. Here to compile a comment must be removed from the MakeFile, so using vim on the line TBTRANS_LINALG, remove the comment.
+```bash
+cd Util
+cd TBTrans
+make
+```
+Then move the tbtrans executable to the bin in the home directory.
+
+## How to use Source Code
+Each test can be run by using the siesta command on the RUN.fdf file in each folder.
+```bash
+siesta < RUN.fdf > run.out
+transiesta < RUN.fdf > run.out
+tbtrans < RUN.fdf > runTB.out
+```
+The three steps will produce a value for the current in the wire based on the discrete value set in the VOLTAGE.fdf file.
