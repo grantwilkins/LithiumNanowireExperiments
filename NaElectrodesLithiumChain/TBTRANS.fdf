@@ -1,0 +1,7 @@
+TS.TBT.NPoints        301
+TS.TBT.Emin           -10.00 eV
+TS.TBT.Emax            30.00 eV
+TS.TBT.OutputRegionData False
+TS.TBT.NEigen           5
+TS.TBT.PDOSFrom         5
+TS.TBT.PDOSTo           6
