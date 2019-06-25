@@ -1,0 +1,13 @@
+#------------------------------------
+# ELECTRODES
+# -----------------------------------
+# LEFT ELECTRODE
+TS.HSFileLeft Be1D_Elec.TSHS
+TS.NumUsedAtomsLeft  4
+
+
+# RIGHT ELECTRODE
+TS.HSFileRight  Be1D_Elec.TSHS
+TS.NumUsedAtomsRight  4
+
+
