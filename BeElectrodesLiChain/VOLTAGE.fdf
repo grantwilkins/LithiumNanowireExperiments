@@ -1,0 +1,7 @@
+TS.Voltage 1.175 eV
+TS.biasContour.NumPoints  1000
+TS.biasContour.Eta 0.0000001 eV
+
+SaveTotalPotential T
+SaveRho T
+SaveElectrostaticPotential T
