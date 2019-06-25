@@ -1,0 +1,13 @@
+#------------------------------------
+# ELECTRODES
+# -----------------------------------
+# LEFT ELECTRODE
+TS.HSFileLeft Na1D_Elec.TSHS
+TS.NumUsedAtomsLeft  4
+
+
+# RIGHT ELECTRODE
+TS.HSFileRight  Na1D_Elec.TSHS
+TS.NumUsedAtomsRight  4
+
+
