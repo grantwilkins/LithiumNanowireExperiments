@@ -1,0 +1,28 @@
+#------------------------------------------------------
+# FDF for Perfect 1d Au chain 
+# 
+SystemName       1D Li GGA       # Descriptive name of the system
+SystemLabel      Lichain    # Short name for naming files
+
+MaxSCFIterations 500
+SolutionMethod transiesta
+
+WriteEigenvalues .TRUE.
+#%include BASIS.fdf
+%include STRUCTc.fdf
+%include ELEC.fdf
+%include TBTRANS.fdf
+%include VOLTAGE.fdf
+
+%block kgrid_Monkhorst_Pack
+ 2    0    0    0.0
+ 0    2    0    0.0
+ 0    0    10    0.0
+%endblock kgrid_Monkhorst_Pack
+
+XC.functional        GGA
+XC.authors           PBE
+MeshCutoff           300.0 Ry
+DM.UseSaveDM         true          # to use continuation files
+DM.MixingWeight      0.0500000000  
+DM.NumberPulay       3
